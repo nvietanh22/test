@@ -1,0 +1,930 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        button,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        input,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        select,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        textarea,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+image {
+    overflow: hidden;
+}
+.hotline-para {
+    font-size: 16px;
+    font-weight: bold;
+    color: #E7252B;
+}
+
+.with-100 {
+    width: 100%;
+}
+.btn-nav_regist {
+    width: 160px;
+    height: 40px;
+    position: absolute;
+    border: 1px solid;
+    background: red;
+    padding: 13px 20px;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 27px;
+}
+
+.grecaptcha-badge {
+    visibility: hidden !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-item > nav-link {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .banner {
+        background-image: url('../images/banner-mobile.jpg');
+        background-size: cover;
+        height: 570.67px;
+        width: 428px;
+    }
+
+    .regist {
+        background-color: #FBF2F5;
+        background-size: cover;
+        height: 1565.38px;
+        width: 428px;
+    }
+
+    .regist-form {
+        height: 866px;
+        padding: 29px;
+    }
+
+    .btn-regist-card-yn {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .btn-regist-card-yn-modal {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .regist-card_coin {
+        position: absolute;
+        background-image: url('../images/coin.png');
+        background-size: cover;
+        height: 70px;
+        width: 78px;
+        transform: rotate(15deg);
+        left: 5px;
+        bottom: 0px;
+    }
+
+    .offers {
+        width: 100%;
+        height: 578px;
+    }
+
+    .order-mobile {
+        order: 1 !important;
+        padding: 29px;
+
+    }
+
+    .order-mobile-second {
+        order: 2 !important;
+    }
+
+    .offers {
+        width: 100%;
+        height: 1456px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .offer-content-item {
+        margin-bottom: 10px;
+    }
+
+    .cards {
+        width: 100%;
+        height: 1455px;
+    }
+
+    .cards-item-img {
+        position: absolute;
+        width: 30%;
+        top: 10%;
+        left: 35%;
+    }
+
+    .cards-item-img-rotation {
+        position: absolute;
+        width: 53%;
+        top: 14%;
+        left: 24%;
+    }
+
+    .footer {
+        width: 100%;
+        height: 678.866px;
+        background-image: url('../images/footer-bg-full-mobile.png');
+        background-size: cover;
+        margin-top: 70px;
+    }
+
+    .footer-content_logo {
+        position: absolute;
+        width: 286.5px;
+        height: 46.3699px;
+        gap: 0px;
+        background-image: url('../images/llogo-footer.png');
+        background-size: cover;
+        top: 11%;
+        left: 14%;
+    }
+
+    #PARAGRAPH163 {
+        width: 322px;
+        top: 145.285px;
+        left: 94px;
+    }
+
+    #PARAGRAPH163>.ladi-paragraph,
+    #PARAGRAPH164>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.3;
+        color: rgb(255, 255, 255);
+    }
+
+    #PARAGRAPH164 {
+        top: 145.285px;
+        left: 22.538px;
+    }
+
+    #PARAGRAPH164 {
+        width: 105px;
+    }
+
+    #PARAGRAPH163>.ladi-paragraph>#website {
+        display: none;
+    }
+
+    #LINE94 {
+        top: 296.595px;
+        left: 4.125px;
+        width: 400px;
+    }
+
+    #LINE94>.ladi-line,
+    #LINE95>.ladi-line {
+        width: 100%;
+        padding: 8px 0px;
+    }
+
+    #LINE94>.ladi-line>.ladi-line-container,
+    #LINE95>.ladi-line>.ladi-line-container {
+        border-top: 1px solid rgb(245, 140, 164);
+        border-right: 1px solid rgb(245, 140, 164);
+        border-bottom: 1px solid rgb(245, 140, 164);
+        border-left: 0px !important;
+    }
+
+    #IMAGE132 {
+        top: 347.595px;
+        left: 23.538px;
+    }
+
+    #IMAGE132,
+    #IMAGE132>.ladi-image>.ladi-image-background {
+        width: 122.98px;
+        height: 124.184px;
+    }
+
+    #IMAGE132>.ladi-image>.ladi-image-background {
+        background-image: url('../images/qrcode.png');
+        background-size: cover;
+    }
+
+    #IMAGE133 {
+        top: 413.905px;
+        left: 156.663px;
+        width: 184.433px;
+        height: 65.026px;
+    }
+
+    #IMAGE133>.ladi-image>.ladi-image-background {
+        background-image: url('../images/chplay.png');
+        background-size: cover;
+        width: 184.433px;
+        height: 65.026px;
+    }
+
+    #IMAGE134 {
+        top: 350.621px;
+        left: 154.763px;
+        width: 188.234px;
+        height: 65.2844px;
+    }
+
+    #IMAGE134>.ladi-image>.ladi-image-background {
+        background-image: url('../images/appstore.png');
+        background-size: cover;
+        width: 188.234px;
+        height: 65.2844px;
+    }
+
+    #PARAGRAPH165 {
+        top: 315.612px;
+        left: 26.105px;
+        width: 294px;
+    }
+
+   #PARAGRAPH165>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.3;
+        color: rgb(255, 255, 255);
+    }
+
+    #LINE95 {
+        top: 494.595px;
+        left: 5.125px;
+        width: 400px;
+    }
+
+    #LINE95>.ladi-line {
+        width: 100%;
+        padding: 8px 0px;
+    }
+
+    #PARAGRAPH166 {
+        top: 536.595px;
+        left: 45px;
+    }
+
+    #PARAGRAPH166>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .regist-card_feature__title {
+        font-size: 30px;
+        position: absolute;
+        top: 26px;
+        left: 100px;
+    }
+
+    .offer-content-item_comma {
+        position: absolute;
+        bottom: 42px;
+        font-size: 19px;
+        left: 222px;
+    }
+
+    #PARAGRAPH167 {
+        position: absolute;
+        top: 577.185px;
+        left: 2px;
+    }
+
+    #PARAGRAPH167>.ladi-paragraph {
+        font-size: 12px;
+        line-height: 1.6;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+    #PARAGRAPH167 {
+        position: absolute;
+        top: 390.185px;
+        left: 3px;
+    }
+
+    #PARAGRAPH167>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    .offer-content-item_comma {
+        position: absolute;
+        top: 295px;
+        font-size: 16px;
+        left: 192px;
+    }
+    .nav-item {
+        padding-right: 40px !important;
+    }
+    .banner {
+        background-image: url('../images/banner.jpg');
+        background-size: cover;
+        height: 530px;
+        width: 100%;
+    }
+
+    .regist {
+        position: relative;
+        background-color: #FBF2F5;
+        background-size: cover;
+        height: 811px;
+        width: 100%;
+    }
+
+    .regist-card {
+        margin-left: 71px;
+    }
+
+    .bg-regist_left {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-image: url('../images/regist-bg-left.png');
+        background-size: cover;
+        height: 792px;
+        width: 513px;
+    }
+
+    .bg-regist_right {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-image: url('../images/regist-bg-right.png');
+        background-size: cover;
+        height: 367px;
+        width: 360px;
+    }
+    .btn-regist-card-yn {
+        width: 240px;
+    }
+
+    .btn-regist-card-yn-modal {
+        width: 200px;
+    }
+    .regist-card_feature__title {
+        font-size: 30px;
+        position: absolute;
+        top: 30px;
+        left: 165px;
+    }
+    .regist-card_coin {
+        position: absolute;
+        background-image: url('../images/coin.png');
+        background-size: cover;
+        height: 70px;
+        width: 78px;
+        transform: rotate(15deg);
+        left: -4px;
+        bottom: 0px;
+    }
+
+    .regist-form {
+        height: 670px;
+        margin-left: 25px;
+    }
+
+    .offers {
+        width: 100%;
+        height: 578px;
+    }
+
+    .bg-offer_right {
+        position: absolute;
+        top: -165px;
+        right: 0px;
+        background-image: url('../images/offer-bg-right.png');
+        background-size: cover;
+        height: 905px;
+        width: 264px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .cards {
+        width: 100%;
+        height: 720px;
+        position: relative;
+    }
+
+    .bg-card_left {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-image: url('../images/card-bg-left.png');
+        background-size: cover;
+        height: 700px;
+        width: 292px;
+    }
+
+    .bg-card_right {
+        position: absolute;
+        right: 0px;
+        z-index: -1;
+        bottom: 21px;
+        background-image: url(../images/card-bg-right.png);
+        background-size: cover;
+        height: 922px;
+        width: 255px;
+    }
+
+    .cards-item-img {
+        position: absolute;
+        width: 30%;
+        top: 60px;
+        left: 123px;
+    }
+
+    .cards-item-img-rotation {
+        position: absolute;
+        width: 53%;
+        top: 83px;
+        left: 88px;
+    }
+
+    .footer {
+        width: 100%;
+        height: 672.866px;
+        background-image: url('../images/footer-bg-full.png');
+        background-size: cover;
+    }
+
+    .footer-content {
+        position: absolute;
+        width: 1200px;
+        height: 370.185px;
+        top: 29%;
+        left: 17%;
+    }
+
+    .footer-content_group {
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer-content_logo {
+        position: absolute;
+        width: 345.71px;
+        height: 54.59px;
+        gap: 0px;
+        opacity: 0px;
+        background-image: url('../images/llogo-footer.png');
+        background-size: cover;
+        top: 10%;
+        left: 35%;
+    }
+
+    #LINE90 {
+        top: 96.685px;
+        left: 0px;
+    }
+
+    #LINE90 {
+        width: 1200px;
+    }
+
+    #LINE90>.ladi-line,
+    #LINE91>.ladi-line {
+        width: 100%;
+        padding: 8px 0px;
+    }
+
+    #LINE90>.ladi-line>.ladi-line-container,
+    #LINE91>.ladi-line>.ladi-line-container {
+        border-top: 2px solid rgb(245, 140, 164);
+        border-right: 2px solid rgb(245, 140, 164);
+        border-bottom: 2px solid rgb(245, 140, 164);
+        border-left: 0px !important;
+    }
+
+    .ladi-line .ladi-line-container {
+        border-bottom: 0 !important;
+        border-right: 0 !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    #PARAGRAPH163 {
+        width: 410px;
+        top: 149.685px;
+        left: 82px;
+    }
+
+    #PARAGRAPH163>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.3;
+        color: rgb(255, 255, 255);
+    }
+
+    #PARAGRAPH164,
+    #PARAGRAPH169 {
+        width: 105px;
+        top: 149.685px;
+        left: 0px;
+    }
+
+    #PARAGRAPH164>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.3;
+        color: rgb(255, 255, 255);
+    }
+
+    #LINE91 {
+        top: 328.685px;
+        left: 0px;
+    }
+
+    #LINE91 {
+        width: 1200px;
+    }
+
+    #LINE97 {
+        height: 224px;
+        top: 108.433px;
+        left: 591px;
+    }
+
+    #LINE97>.ladi-line {
+        height: 100%;
+    }
+
+    #LINE97>.ladi-line>.ladi-line-container {
+        border-right: 2px solid rgb(245, 140, 164) !important;
+        border-bottom: 2px solid rgb(245, 140, 164) !important;
+    }
+
+    #PARAGRAPH165 {
+        width: 294px;
+    }
+
+    #PARAGRAPH165 {
+        top: 149.685px;
+        left: 772.433px;
+    }
+
+    #PARAGRAPH165>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.3;
+        color: rgb(255, 255, 255);
+    }
+
+    #IMAGE132 {
+        top: 181.685px;
+        left: 772.433px;
+        width: 113.884px;
+        height: 115px;
+    }
+
+    #IMAGE132>.ladi-image>.ladi-image-background {
+        background-image: url('../images/qrcode.png');
+        width: 113.884px;
+        height: 115px;
+        background-size: cover;
+    }
+
+    #IMAGE133 {
+        top: 238.659px;
+        left: 887.212px;
+        width: 184.433px;
+        height: 65.026px;
+    }
+
+    #IMAGE133>.ladi-image>.ladi-image-background,
+    #IMAGE138>.ladi-image>.ladi-image-background {
+        background-image: url('../images/chplay.png');
+        background-size: cover;
+        width: 184.433px;
+        height: 65.026px;
+    }
+
+    #IMAGE134 {
+        top: 181.685px;
+        left: 886.317px;
+        width: 188.234px;
+        height: 65.2844px;
+    }
+
+    #IMAGE134>.ladi-image>.ladi-image-background {
+        background-image: url('../images/appstore.png');
+        background-size: cover;
+        width: 188.234px;
+        height: 65.2844px;
+    }
+
+    #PARAGRAPH166 {
+        top: 363.185px;
+        left: 400px;
+        width: 400px;
+    }
+
+    #PARAGRAPH166>.ladi-paragraph {
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+   
+}
+
+
+.ladi-transition {
+    transition: all 150ms linear 0s;
+}
+
+.ladi-paragraph {
+    width: 100%;
+    display: inline-block;
+    word-break: break-word;
+}
+
+.ladi-line {
+    position: relative;
+}
+
+.ladi-element {
+    position: absolute;
+}
+
+.ladi-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.regist-card {
+    height: 320px;
+    width: 400px;
+    position: relative;
+}
+
+.regist-card_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.regist-card_feature {
+    width: 740px;
+    height: 290px;
+}
+
+.regist-card_feature__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn-card_regist {
+    border: 1px solid;
+    background: #E7252B;
+    padding: 13px 20px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 27px;
+}
+
+.regist-form_content {
+    margin: 0 auto;
+    border-width: 4px 0px 0px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(219, 3, 110);
+    background-color: #FFF;
+}
+
+.regist-form_content__title {
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(219, 3, 110);
+    ;
+}
+
+.button-gardient {
+    background: linear-gradient(to right, #ff0000, #800080);
+    color: #fff !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: none !important;
+    border-radius: 0.5rem !important;
+    padding: 0.7rem 0.9rem !important;
+    font-weight: bold !important;
+}
+
+.offers {
+    position: relative;
+    background-color: #FFF;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.section-title_line {
+    width: 83px;
+    height: 5px;
+    background: red;
+    color: red;
+    opacity: 1 !important;
+}
+
+.cards-item_para__title {
+    font-size: 21px;
+    color: #E7252B;
+    font-weight: bold;
+}
+
+.cards-item_para__list li {
+    padding-bottom: 8px;
+}
+
+@font-face {
+    font-family: "RmudHNGcmVlLUldCTRlBybRpcBsYXktTWVkaXVtLnRZg";
+    src: url("./assets/font/fontsfree-net-sfprodisplay-medium-20240219081708-bmy2-.ttf") format("truetype");
+}
+
+#GROUP89 {
+    width: 70px;
+    height: 153.163px;
+    top: 0px;
+    left: auto;
+    right: 20px;
+    bottom: 0px;
+    position: fixed;
+    z-index: 90000050;
+    margin: auto 0px;
+}
+#GROUP87, #IMAGE73, #IMAGE73>.ladi-image>.ladi-image-background, #GROUP88, #IMAGE72, #IMAGE72>.ladi-image>.ladi-image-background {
+    width: 70px;
+    height: 70px;
+}
+
+#GROUP88 {
+    top: 83.163px;
+    left: 0px;
+}
+
+#IMAGE75.ladi-animation>.ladi-image {
+    animation-name: tada;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#IMAGE75>.ladi-image>.ladi-image-background {
+    background-image: url('../images/group-5-20240216094840-1ksqd.png');
+    background-size: cover;
+}
+
+#IMAGE73>.ladi-image>.ladi-image-background {
+    background-image: url('../images/frame-7-20240313113510-pk7x3.png');
+    background-size: cover;
+}
+
+#IMAGE75, #IMAGE75>.ladi-image>.ladi-image-background {
+    width: 27px;
+    height: 26px;
+}
+
+#IMAGE75 {
+    top: 22px;
+    left: 21.5px;
+}
+#IMAGE72>.ladi-image>.ladi-image-background {
+    background-image: url('../images/frame-4-20240216094817-cpugp.png');
+    background-size: cover;
+}
+
+#IMAGE74 {
+    top: 19px;
+    left: 19px;
+}
+
+#IMAGE74, #IMAGE74>.ladi-image>.ladi-image-background {
+    width: 32px;
+    height: 32px;
+}
+
+#IMAGE74, #IMAGE74>.ladi-image>.ladi-image-background {
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/facebook_messenger_logo_2018-1-20240216094817-ckct0.png');
+}
+
+/* #form-submit select[data-selected=""] {
+    color: rgb(111, 108, 108);
+} */
+
+#livingPlace option { color: black; }
+.empty { color: #6c757d; }
