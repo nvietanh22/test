@@ -124,12 +124,6 @@ image {
     border-radius: 27px;
 }
 
-.grecaptcha-badge {
-    visibility: hidden !important;
-    opacity: 0;
-    pointer-events: none;
-}
-
 .nav-item > nav-link {
     font-size: 16px;
     font-weight: bold;
@@ -859,7 +853,7 @@ image {
     height: 153.163px;
     top: 0px;
     left: auto;
-    right: 20px;
+    right: 50px;
     bottom: 0px;
     position: fixed;
     z-index: 90000050;

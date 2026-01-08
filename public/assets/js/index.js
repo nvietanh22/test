@@ -105,7 +105,7 @@ async function genOtp(prevForm) {
   isOtpFailed = false;
   grecaptcha.ready(function () {
     grecaptcha
-      .execute("GOOGLE_SITE_KEY_TEMP", { action: "submit" })
+      .execute("6LdughIsAAAAAEQtmp8KqsbsWOVsRL1eCKIeRoz0", { action: "submit" })
       .then(function (token) {
         $('#loading').show();
         let validateUrl = `${env.backEndApi}/api/lead/validate`;
@@ -125,7 +125,7 @@ async function genOtp(prevForm) {
             if (dataRes.rslt_cd === 's' && dataRes.reason_code === '0') {
               grecaptcha.ready(function () {
                 grecaptcha
-                  .execute("GOOGLE_SITE_KEY_TEMP", { action: "submit" })
+                  .execute("6LdughIsAAAAAEQtmp8KqsbsWOVsRL1eCKIeRoz0", { action: "submit" })
                   .then(function (token) {
                     $('#loading').show();
                     let urlOtp = `${env.backEndApi}/api/otp/gen-otp`;
@@ -191,7 +191,7 @@ async function genOtp(prevForm) {
 function verifyOtp(otpDegit) {
   grecaptcha.ready(function () {
     grecaptcha
-      .execute("GOOGLE_SITE_KEY_TEMP", { action: "submit" })
+      .execute("6LdughIsAAAAAEQtmp8KqsbsWOVsRL1eCKIeRoz0", { action: "submit" })
       .then(function (token) {
         $('#loading').show();
         let urlOtp = `${env.backEndApi}/api/otp/verify-otp`;
@@ -216,7 +216,7 @@ function verifyOtp(otpDegit) {
               grecaptcha.ready(function () {
                 isOtpFailed = false;
                 grecaptcha
-                  .execute("GOOGLE_SITE_KEY_TEMP", { action: "submit" })
+                  .execute("6LdughIsAAAAAEQtmp8KqsbsWOVsRL1eCKIeRoz0", { action: "submit" })
                   .then(function (token) {
                     var navigator_info = window.navigator;
                     var screen_info = window.screen;
@@ -248,6 +248,7 @@ function verifyOtp(otpDegit) {
                       contact_number: formData.phone,
                       note: JSON.stringify(dataNote),
                     };
+                     const timeCallValue = formData.timeCall1 ? formData.timeCall1 : formData.timeCall2;
 
                     let url = `${env.backEndApi}/api/lead/send`;
                     lib.post({
@@ -256,8 +257,14 @@ function verifyOtp(otpDegit) {
                       data: JSON.stringify(data),
                       complete: function (response) {
                         $('#loading').hide();
-                        showNoti('success', 'Thành công', 'Cảm ơn Quý khách đã đăng ký thông tin. Chúng tôi sẽ liên hệ lại sớm nhất!');
-                        hideModal();
+                        if (timeCallValue === "Tư vấn ngay") {
+                          showNoti('success', 'Đăng ký thành công', "Quý khách vui lòng gọi Hotline 1900 633 070 để được tư vấn ngay");
+                          hideModal();
+                        }
+                        else {
+                          showNoti('success', 'Thành công', 'Cảm ơn Quý khách đã đăng ký thông tin. Chúng tôi sẽ liên hệ lại sớm nhất!');
+                          hideModal();
+                        }
                       },
                       error: function (ex) {
                         $('#loading').hide();

@@ -1,0 +1,496 @@
+-- auto-generated definition
+create table PHONE_VERIFICATION_TOKEN
+(
+    ID           NUMBER       default ESB_USER.PHONE_VERIFICATION_TOKEN_SEQ.nextval not null
+        primary key,
+    PHONE_NUMBER VARCHAR2(20 char)                                                  not null,
+    TOKEN        VARCHAR2(100 char)                                                 not null
+        unique,
+    CREATED_AT   TIMESTAMP(6) default SYSTIMESTAMP                                  not null,
+    EXPIRED_AT   TIMESTAMP(6)                                                       not null,
+    VERIFIED     NUMBER(1)    default 0
+        check (VERIFIED IN (0, 1)),
+    OTP_STATUS   NUMBER(1)    default 0                                             not null
+        check (OTP_STATUS IN (0, 1)),
+    LAYOUT_ID    VARCHAR2(50 char)
+)
+/
+
+-- auto-generated definition
+create table MINIGAME_CUSTOMERS
+(
+    ID            NUMBER(20)   default "ESB_USER"."SEQ_MINIGAME_CUSTOMERS"."NEXTVAL" not null
+        primary key,
+    THOI_GIAN     TIMESTAMP(6) default SYSTIMESTAMP,
+    SO_DIEN_THOAI VARCHAR2(20),
+    OTP_STATUS    VARCHAR2(20),
+    LOAI_KH       VARCHAR2(50)
+)
+/
+
+-- auto-generated definition
+create table MOBILE_CARD
+(
+    ID                 NUMBER(19) default "ESB_USER"."MOBILE_CARD_ID_SEQ"."NEXTVAL" not null
+        primary key,
+    LINK               VARCHAR2(500),
+    NAME               VARCHAR2(255),
+    SMS                VARCHAR2(255),
+    EMAIL              VARCHAR2(255),
+    PARTNER_CODE       VARCHAR2(255),
+    GOTIT_CODE         VARCHAR2(255),
+    VOUCHER_SERIAL     VARCHAR2(255),
+    BRAND              VARCHAR2(255),
+    PRODUCT_NAME       VARCHAR2(255),
+    PRICE              VARCHAR2(100),
+    ISSUE_DATE         DATE,
+    EXPIRED_DATE       DATE,
+    TRANSACTION_REF_ID VARCHAR2(255),
+    PO_NUMBER          VARCHAR2(255),
+    STATUS             VARCHAR2(50),
+    CREATED_DATE       VARCHAR2(50),
+    PHONE_NUMBER       VARCHAR2(20),
+    RECEIVED_DATE      DATE
+)
+/
+
+-- auto-generated definition
+create table RATE_PRICE
+(
+    ID    NUMBER default ESB_USER.RATE_PRICE_SEQ.NEXTVAL not null
+        primary key,
+    RATE  VARCHAR2(100 char)                             not null,
+    PRICE VARCHAR2(100 char)                             not null
+)
+/
+
+INSERT INTO ESB_USER.RATE_PRICE (ID, RATE, PRICE) VALUES (4, '10', 'Unlucky');
+INSERT INTO ESB_USER.RATE_PRICE (ID, RATE, PRICE) VALUES (2, '80', '10000');
+INSERT INTO ESB_USER.RATE_PRICE (ID, RATE, PRICE) VALUES (3, '10', '20000');
+INSERT INTO ESB_USER.RATE_PRICE (ID, RATE, PRICE) VALUES (5, '0', '50000');
+INSERT INTO ESB_USER.RATE_PRICE (ID, RATE, PRICE) VALUES (6, '0', '100000');
+
+
+INSERT INTO ESB_USER.MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL, BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID, PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE) VALUES (244, 'https://c.gotit.vn/2I8XC2NK', null, null, null, 'G6U77709ML', null, '5XGUIXOR2E', 'Viettel', 'Nạp thẻ điện thoại', '20000', TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, 'ngocpm@lottefinance.vn', 'ACTIVE', null, null, null);
+INSERT INTO ESB_USER.MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL, BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID, PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE) VALUES (268, 'https://c.gotit.vn/NFJQQFU4', null, null, null, '1K96M34MKR', null, 'NJB7L76664', 'Viettel', 'Nạp thẻ điện thoại', '20000', TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, 'ngocpm@lottefinance.vn', 'ACTIVE', null, null, null);
+INSERT INTO ESB_USER.MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL, BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID, PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE) VALUES (174, 'https://c.gotit.vn/DBN4HOXK', null, null, null, 'TNOZXX97PQ', null, 'MWIRCNSL5K', 'Vinaphone', 'Nạp thẻ điện thoại', '20000', TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, 'ngocpm@lottefinance.vn', 'ACTIVE', null, null, null);
+INSERT INTO ESB_USER.MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL, BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID, PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE) VALUES (178, 'https://c.gotit.vn/PQ1W8YAS', null, null, null, 'GX73HL9CW5', null, 'FHOHRUX0HW', 'Vinaphone', 'Nạp thẻ điện thoại', '20000', TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, 'ngocpm@lottefinance.vn', 'ACTIVE', null, null, null);
+INSERT INTO ESB_USER.MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL, BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID, PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE) VALUES (182, 'https://c.gotit.vn/AO6OAOLH', null, null, null, 'FGCOXWIX1Y', null, '9BFNZVV9HG', 'Viettel', 'Nạp thẻ điện thoại', '50000', TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, 'ngocpm@lottefinance.vn', 'ACTIVE', null, null, null);
+INSERT INTO ESB_USER.MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL, BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID, PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE) VALUES (186, 'https://c.gotit.vn/OIV3MQ4S', null, null, null, '9LUD8SB4OK', null, 'U0S8AU4SYW', 'Vinaphone', 'Nạp thẻ điện thoại', '50000', TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, 'ngocpm@lottefinance.vn', 'ACTIVE', null, null, null);
+INSERT INTO ESB_USER.MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL, BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID, PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE) VALUES (190, 'https://c.gotit.vn/CNUUB14W', null, null, null, 'JRITH5Y1BF', null, '18S3YZ90NW', 'Viettel', 'Nạp thẻ điện thoại', '10000', TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2031-09-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, 'ngocpm@lottefinance.vn', 'INACTIVE', null, '0982941910', TO_DATE('2026-01-08 10:05:21', 'YYYY-MM-DD HH24:MI:SS'));
+
+
+create PROCEDURE CHECK_PHONE_EXISTS (
+    p_phone_number IN VARCHAR2,
+    STATUS          OUT NUMBER,
+    MESSAGE         OUT VARCHAR2,
+    p_token         OUT VARCHAR2
+)
+IS
+    v_verified PHONE_VERIFICATION_TOKEN.VERIFIED%TYPE;
+    v_token    PHONE_VERIFICATION_TOKEN.TOKEN%TYPE;
+BEGIN
+    -- Init default
+    STATUS  := 0;
+    MESSAGE := '';
+    p_token := NULL;
+
+    -- Validate input
+    IF p_phone_number IS NULL OR TRIM(p_phone_number) = '' THEN
+        RAISE_APPLICATION_ERROR(-20010, 'Phone number must not be null or empty');
+    END IF;
+
+    BEGIN
+        -- Lấy VERIFIED + TOKEN
+        SELECT VERIFIED, TOKEN
+        INTO v_verified, v_token
+        FROM PHONE_VERIFICATION_TOKEN
+        WHERE PHONE_NUMBER = p_phone_number
+        FETCH FIRST 1 ROWS ONLY;
+
+        -- Đã tồn tại số điện thoại -> check VERIFIED
+        IF v_verified = 1 THEN
+            STATUS  := 1;
+            MESSAGE := 'DUPLICATE';
+            p_token := NULL; -- không trả token khi đã verified
+        ELSE
+            STATUS  := 0;
+            MESSAGE := 'PENDING';
+            p_token := v_token; -- ✅ chỉ trả token khi PENDING
+        END IF;
+
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            -- Không tồn tại số điện thoại
+            STATUS  := 0;
+            MESSAGE := 'Số điện thoại chưa tồn tại trong hệ thống.';
+            p_token := NULL;
+    END;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        STATUS  := -1;
+        MESSAGE := 'Lỗi CHECK_PHONE_EXISTS: ' || SQLERRM;
+        p_token := NULL;
+END;
+/
+
+create PROCEDURE FIND_FIRST_BY_STATUS_BRAND_PRICE(
+    p_status       IN VARCHAR2,
+    p_brand        IN VARCHAR2,
+    p_price        IN VARCHAR2,
+    o_id                 OUT NUMBER,
+    o_link               OUT VARCHAR2,
+    o_name               OUT VARCHAR2,
+    o_sms                OUT VARCHAR2,
+    o_email              OUT VARCHAR2,
+    o_partner_code       OUT VARCHAR2,
+    o_gotit_code         OUT VARCHAR2,
+    o_voucher_serial     OUT VARCHAR2,
+    o_product_name       OUT VARCHAR2,
+    o_issue_date         OUT DATE,
+    o_expired_date       OUT DATE,
+    o_transaction_ref_id OUT VARCHAR2,
+    o_po_number          OUT VARCHAR2,
+    o_created_date       OUT VARCHAR2,
+    o_phone_number       OUT VARCHAR2,
+    o_received_date      OUT DATE,
+    o_status             OUT VARCHAR2,
+    o_message            OUT VARCHAR2
+)
+IS
+BEGIN
+    SELECT ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL,
+           PRODUCT_NAME, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID,
+           PO_NUMBER, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE
+    INTO o_id, o_link, o_name, o_sms, o_email, o_partner_code, o_gotit_code, o_voucher_serial,
+         o_product_name, o_issue_date, o_expired_date, o_transaction_ref_id,
+         o_po_number, o_created_date, o_phone_number, o_received_date
+    FROM MOBILE_CARD
+    WHERE STATUS = p_status
+      AND BRAND = p_brand
+      AND PRICE = p_price
+      AND ROWNUM = 1;
+    o_status := 0;
+    o_message := 'Tìm thấy bản ghi phù hợp';
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        o_id := NULL;
+        o_link := NULL;
+        o_name := NULL;
+        o_sms := NULL;
+        o_email := NULL;
+        o_partner_code := NULL;
+        o_gotit_code := NULL;
+        o_voucher_serial := NULL;
+        o_product_name := NULL;
+        o_issue_date := NULL;
+        o_expired_date := NULL;
+        o_transaction_ref_id := NULL;
+        o_po_number := NULL;
+        o_created_date := NULL;
+        o_phone_number := NULL;
+        o_received_date := NULL;
+        o_status := 1;
+        o_message := 'Không tìm thấy bản ghi phù hợp';
+    WHEN OTHERS THEN
+        o_message := 'Lỗi procedure FIND_FIRST_BY_STATUS_BRAND_PRICE khi tìm kiếm: ' || SQLERRM;
+END;
+/
+
+create PROCEDURE FIND_PHONE_TOKEN(
+    p_phone_number IN VARCHAR2,
+    p_token        IN VARCHAR2,
+    p_id           OUT NUMBER,
+    p_out_phone    OUT VARCHAR2,
+    p_out_token    OUT VARCHAR2,
+    p_layout_id    OUT VARCHAR2,
+    p_created_at   OUT DATE,
+    p_expired_at   OUT DATE,
+    p_verified     OUT NUMBER,
+    p_otp_status   OUT NUMBER,
+    p_status       OUT NUMBER,
+    p_message      OUT VARCHAR2
+)
+IS
+BEGIN
+    p_status := 0;
+    p_message := '';
+
+    IF p_phone_number IS NULL OR p_token IS NULL THEN
+        p_status := -1;
+        p_message := 'Phone and token must not be null';
+        RETURN;
+    END IF;
+
+    BEGIN
+        SELECT ID,
+               PHONE_NUMBER,
+               TOKEN,
+               LAYOUT_ID,
+               CREATED_AT,
+               EXPIRED_AT,
+               VERIFIED,
+               OTP_STATUS
+        INTO   p_id,
+               p_out_phone,
+               p_out_token,
+               p_layout_id,
+               p_created_at,
+               p_expired_at,
+               p_verified,
+               p_otp_status
+        FROM PHONE_VERIFICATION_TOKEN
+        WHERE PHONE_NUMBER = p_phone_number
+          AND TOKEN = p_token
+          AND EXPIRED_AT > SYSDATE
+        ORDER BY CREATED_AT DESC
+        FETCH FIRST 1 ROWS ONLY;
+
+        p_status := 0;
+        p_message := 'Token hợp lệ';
+
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            p_status := 1;
+            p_message := 'Token không hợp lệ / hết hạn / đã dùng';
+    END;
+END;
+/
+
+create FUNCTION gen_uuid RETURN VARCHAR2 AS
+  l_seed        BINARY_INTEGER;
+  l_random_num  NUMBER(5);
+
+  l_date        VARCHAR2(25);
+  l_random      VARCHAR2(4);
+  l_ip_address  VARCHAR2(12);
+BEGIN
+  l_seed := TO_NUMBER(TO_CHAR(SYSDATE,'YYYYDDMMSS'));
+  DBMS_RANDOM.initialize (val => l_seed);
+  l_random_num := TRUNC(DBMS_RANDOM.value(low => 1, high => 65535));
+  DBMS_RANDOM.terminate;
+
+  l_date       := conversion_api.to_hex(TO_NUMBER(TO_CHAR(SYSTIMESTAMP,'FFSSMIHH24DDMMYYYY')));
+  l_random     := RPAD(conversion_api.to_hex(l_random_num), 4, '0');
+  l_ip_address := conversion_api.to_hex(TO_NUMBER(REPLACE(NVL(SYS_CONTEXT('USERENV','IP_ADDRESS'), '10.252.248.108'), '.', '')));
+
+  RETURN SUBSTR(l_date, 1, 8)                     || '-' ||
+         SUBSTR(l_date, 9, 4)                     || '-' ||
+         SUBSTR(l_date, 13, 4)                    || '-' ||
+         RPAD(SUBSTR(l_date, 17), 4, '0')         || '-' ||
+         RPAD(l_random || l_ip_address, 12, '0');
+END;
+/
+
+
+
+create PROCEDURE GET_ACTIVE_PRICE_BY_BRAND (
+    p_brand     IN  VARCHAR2,
+    o_prices    OUT VARCHAR2
+)
+IS
+BEGIN
+    SELECT LISTAGG(PRICE, ',') WITHIN GROUP (ORDER BY PRICE)
+    INTO o_prices
+    FROM (
+        SELECT DISTINCT PRICE
+        FROM MOBILE_CARD
+        WHERE BRAND = p_brand AND STATUS = 'ACTIVE'
+    );
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        o_prices := 'Đã hết thẻ, vui lòng chọn nhà cung cấp khác';
+    WHEN OTHERS THEN
+        o_prices := 'Lỗi hệ thống: ' || SQLERRM;
+END;
+/
+
+create PROCEDURE GET_ALL_RATE_PRICE(
+    OUT_RESULT OUT VARCHAR2
+)
+AS
+    v_result VARCHAR2(4000) := '';
+BEGIN
+    FOR rec IN (
+        SELECT RATE, PRICE
+        FROM RATE_PRICE
+        ORDER BY ID
+    ) LOOP
+        v_result := v_result || rec.RATE || '-' || rec.PRICE || ';';
+    END LOOP;
+
+    IF v_result IS NOT NULL THEN
+        v_result := RTRIM(v_result, ';');
+    END IF;
+
+    OUT_RESULT := v_result;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Lỗi khi tạo chuỗi RATE_PRICE: ' || SQLERRM);
+END;
+/
+
+create PROCEDURE UPSERT_MOBILE_CARD(
+    p_id IN NUMBER,
+    p_link IN VARCHAR2,
+    p_name IN VARCHAR2,
+    p_sms IN VARCHAR2,
+    p_email IN VARCHAR2,
+    p_partner_code IN VARCHAR2,
+    p_gotit_code IN VARCHAR2,
+    p_voucher_serial IN VARCHAR2,
+    p_brand IN VARCHAR2,
+    p_product_name IN VARCHAR2,
+    p_price IN VARCHAR2,
+    p_issue_date IN DATE,
+    p_expired_date IN DATE,
+    p_transaction_ref_id IN VARCHAR2,
+    p_po_number IN VARCHAR2,
+    p_status IN VARCHAR2,
+    p_created_date IN VARCHAR2,
+    p_phone_number IN VARCHAR2,
+    p_received_date IN DATE,
+    o_status OUT NUMBER,
+    o_message OUT VARCHAR2,
+    o_voucher_serial OUT VARCHAR2,
+    o_partner_code OUT VARCHAR2
+)
+    IS
+    v_exists NUMBER := 0;
+    v_id     NUMBER;
+BEGIN
+    -- Check nếu đã tồn tại VOUCHER_SERIAL
+    SELECT COUNT(1) INTO v_exists FROM MOBILE_CARD WHERE VOUCHER_SERIAL = p_voucher_serial;
+
+    IF v_exists > 0 THEN
+        -- Lấy ID hiện tại để trả về trong message
+        SELECT ID INTO v_id FROM MOBILE_CARD WHERE VOUCHER_SERIAL = p_voucher_serial FETCH FIRST 1 ROWS ONLY;
+
+        -- Update bản ghi cũ
+        UPDATE MOBILE_CARD
+        SET LINK               = p_link,
+            NAME               = p_name,
+            SMS                = p_sms,
+            EMAIL              = p_email,
+            PARTNER_CODE       = p_partner_code,
+            GOTIT_CODE         = p_gotit_code,
+            BRAND              = p_brand,
+            PRODUCT_NAME       = p_product_name,
+            PRICE              = p_price,
+            ISSUE_DATE         = p_issue_date,
+            EXPIRED_DATE       = p_expired_date,
+            TRANSACTION_REF_ID = p_transaction_ref_id,
+            PO_NUMBER          = p_po_number,
+            STATUS             = p_status,
+            CREATED_DATE       = p_created_date,
+            PHONE_NUMBER       = p_phone_number,
+            RECEIVED_DATE      = p_received_date
+        WHERE VOUCHER_SERIAL = p_voucher_serial;
+
+        o_status := 1;
+        o_message := 'Cập nhật MOBILE_CARD thành công. ID: ' || v_id;
+    ELSE
+        -- Insert mới
+        INSERT INTO MOBILE_CARD (ID, LINK, NAME, SMS, EMAIL, PARTNER_CODE, GOTIT_CODE, VOUCHER_SERIAL,
+                                 BRAND, PRODUCT_NAME, PRICE, ISSUE_DATE, EXPIRED_DATE, TRANSACTION_REF_ID,
+                                 PO_NUMBER, STATUS, CREATED_DATE, PHONE_NUMBER, RECEIVED_DATE)
+        VALUES (MOBILE_CARD_ID_SEQ.NEXTVAL, p_link, p_name, p_sms, p_email, p_partner_code, p_gotit_code,
+                p_voucher_serial,
+                p_brand, p_product_name, p_price, p_issue_date, p_expired_date, p_transaction_ref_id,
+                p_po_number, p_status, p_created_date, p_phone_number, p_received_date);
+
+        o_status := 1;
+        o_message := 'Thêm MOBILE_CARD thành công.';
+    END IF;
+
+    o_voucher_serial := p_voucher_serial;
+    o_partner_code := p_partner_code;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        o_status := -1;
+        o_message := 'Lỗi MOBILE_CARD: ' || SQLERRM;
+        o_voucher_serial := NULL;
+        o_partner_code := NULL;
+END;
+/
+
+create PROCEDURE UPSERT_PHONE_TOKEN(
+    p_phone_number IN VARCHAR2,
+    p_token        IN VARCHAR2,
+    p_layout_id    IN VARCHAR2,
+    p_created_at   IN DATE,
+    p_expired_at   IN DATE,
+    p_verified     IN NUMBER,
+    p_otp_status   IN NUMBER,
+    STATUS         OUT NUMBER,
+    MESSAGE        OUT VARCHAR2
+)
+IS
+    v_id NUMBER;
+BEGIN
+    STATUS := 0;
+    MESSAGE := '';
+
+    -- VALIDATE INPUT
+    IF p_phone_number IS NULL
+        OR p_token IS NULL
+        OR p_layout_id IS NULL
+        OR p_otp_status IS NULL
+    THEN
+        STATUS := -1;
+        MESSAGE := 'Phone, token, layout_id, otp_status are required';
+        RETURN;
+    END IF;
+
+    -- VALIDATE OTP_STATUS
+    IF p_otp_status NOT IN (0, 1) THEN
+        STATUS := -1;
+        MESSAGE := 'Invalid otp_status';
+        RETURN;
+    END IF;
+
+    IF p_expired_at <= p_created_at THEN
+        STATUS := -1;
+        MESSAGE := 'Expired time must be after created time';
+        RETURN;
+    END IF;
+
+    BEGIN
+        SELECT ID INTO v_id
+        FROM PHONE_VERIFICATION_TOKEN
+        WHERE PHONE_NUMBER = p_phone_number
+          AND LAYOUT_ID = p_layout_id
+          AND ROWNUM = 1;
+
+        UPDATE PHONE_VERIFICATION_TOKEN
+        SET TOKEN      = p_token,
+            CREATED_AT = p_created_at,
+            EXPIRED_AT = p_expired_at,
+            VERIFIED   = p_verified,
+            OTP_STATUS = p_otp_status
+        WHERE ID = v_id;
+
+        STATUS := 1;
+        MESSAGE := 'Cập nhật token thành công';
+
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            INSERT INTO PHONE_VERIFICATION_TOKEN (
+                PHONE_NUMBER, TOKEN, CREATED_AT, EXPIRED_AT,
+                VERIFIED, OTP_STATUS, LAYOUT_ID
+            ) VALUES (
+                p_phone_number, p_token, p_created_at, p_expired_at,
+                p_verified, p_otp_status, p_layout_id
+            );
+
+        STATUS := 1;
+        MESSAGE := 'Thêm token mới thành công';
+    END;
+END;
+/
+

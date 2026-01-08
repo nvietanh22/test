@@ -31,7 +31,7 @@ function lib() {
             headers: {
                 "api-key": "Dejwak-mevped-8zoffi",
                 "captcha-response": option.token,
-                "channel": 'zHXsd9lI9CDmUdoVGdQrEA=='
+                "channel": 'h8i5w2sb/IfoEBU1ER5d8A=='
             },
             dataType: 'json',
             complete: function (response) {
@@ -99,7 +99,6 @@ function lib() {
 
         return { isValid: true};
     };
-
     this.showToast = function(option) {
         if (option.type === 'success') {
             toast({
